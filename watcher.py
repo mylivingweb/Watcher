@@ -349,7 +349,7 @@ class WatcherDaemon(Daemon):
 
 
 def log(msg):
-    sys.stdout.write("%s %s\n" % ( str(datetime.datetime.now()), msg ))
+    sys.stdout.write("%s %s\n" % ( str(datetime.datetime.now().strftime("%b %d %R")), msg ))
 
 
 if __name__ == "__main__":

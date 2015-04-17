@@ -13,9 +13,9 @@ It's written in Python, making it easier to hack.
 You need Python 2.7 and the [pyinotify](http://github.com/seb-m/pyinotify)
 library.
 
-In Ubuntu (and Debian) you can install these with:
+In CentOS 7 you can install these with:
 
-    sudo apt-get install python python-pyinotify
+    yum install -y python python-inotify python-yaml git
 
 ## Configuration
 
@@ -26,6 +26,8 @@ using the `--config` option.
 
 If you edit the ini file you must restart the daemon for it to reload the
 configuration.
+
+Currently outputs log with timestamp to /var/log/watcher.log
 
 ## Starting the Daemon
 
@@ -50,3 +52,8 @@ If you don't want the daemon to fork to the background, start it with
 
     ./watcher.py debug
 
+##TODO
+
+Format output to ingest in Logstash Forwarder
+Ship logs to central server
+Use grok to parse logs for ingesting into elasticsearch and alerting
