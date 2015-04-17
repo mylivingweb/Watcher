@@ -16,6 +16,11 @@ library.
 In CentOS 7 you can install these with:
 
     yum install -y python python-inotify python-yaml git
+### Requirements if you want ELK output
+
+1. A working [ELK Stack](https://www.digitalocean.com/community/tutorials/how-to-use-logstash-and-kibana-to-centralize-logs-on-centos-7)
+2. Install [logstash-forwarder](https://www.digitalocean.com/community/tutorials/how-to-use-logstash-and-kibana-to-centralize-logs-on-centos-7#set-up-logstash-forwarder)
+3. Copy config snippets to your syslog input and output conf files
 
 ## Configuration
 
@@ -54,8 +59,12 @@ If you don't want the daemon to fork to the background, start it with
 
 ##TODO
 
-Format output to ingest in Logstash Forwarder
+Write script to automate install and add correct systemd scripts
 
-Ship logs to central server
+~~Format output to ingest in Logstash Forwarder~~
 
-Use grok to parse logs for ingesting into elasticsearch and alerting
+~~Ship logs to central server~~
+
+~~Use grok to parse logs for ingesting into elasticsearch and alerting~~
+
+![screenshot of kibana](http://i.imgur.com/PyqLbZx.jpg)

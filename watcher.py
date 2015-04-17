@@ -190,7 +190,7 @@ class EventHandler(pyinotify.ProcessEvent):
     # from http://stackoverflow.com/questions/35817/how-to-escape-os-system-calls-in-python
     def shellquote(self,s):
         s = str(s)
-        return "'" + s.replace("'", "'\\''") + "'"
+        return "" + s.replace("'", "'\\'") + ""
 
     def runCommand(self, event):
         t = Template(self.command)
@@ -349,7 +349,7 @@ class WatcherDaemon(Daemon):
 
 
 def log(msg):
-    sys.stdout.write("%s %s\n" % ( str(datetime.datetime.now().strftime("%b %d %R")), msg ))
+    sys.stdout.write("%s %s\n" % ( str(datetime.datetime.now().strftime("%b %d %H:%M:%S")), msg ))
 
 
 if __name__ == "__main__":
