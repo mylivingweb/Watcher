@@ -55,5 +55,7 @@ If you don't want the daemon to fork to the background, start it with
 ##TODO
 
 Format output to ingest in Logstash Forwarder
+
 Ship logs to central server
+
 Use grok to parse logs for ingesting into elasticsearch and alerting
