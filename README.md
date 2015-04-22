@@ -57,6 +57,34 @@ If you don't want the daemon to fork to the background, start it with
 
     ./watcher.py debug
 
+## Adding Watcher as a service
+
+Currently watcher service looks for watcher in /root/Watcher/watcher.py, update watcher.service if you cloned repo elsewhere.
+
+Make sure watcher.py is marked as executable:
+
+    chmod +x watcher.py
+
+Copy watcher.service to /etc/systemd/system/watcher.service
+
+    cp watcher.service  /etc/systemd/system/watcher.service
+
+Start your new watcher service
+
+    systemctl start watcher
+
+Enable your watcher to start on boot
+
+    systemctl enable watcher
+
+Restart your watcher
+
+    systemctl restart watcher
+
+View status of your watcher
+
+    systemctl status watcher
+
 ##TODO
 
 Write script to automate install and add correct systemd scripts
