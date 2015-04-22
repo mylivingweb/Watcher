@@ -93,7 +93,7 @@ View status of your watcher
 
 ##TODO
 
-Write script to automate install and add correct systemd scripts
+~~Write script to automate install and add correct systemd scripts~~
 
 ~~Format output to ingest in Logstash Forwarder~~
 
