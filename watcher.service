@@ -1,0 +1,15 @@
+[Unit]
+Description=watcher.service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/root/Watcher/watcher.py start
+ExecStop=/root/Watcher/watcher.py stop
+ExecReload=/root/Watcher/watcher.py restart
+PIDFile=/tmp/watcher.pid
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
