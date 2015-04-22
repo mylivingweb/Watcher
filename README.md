@@ -8,6 +8,12 @@ recursively monitor directories.
 
 It's written in Python, making it easier to hack.
 
+##Quick Install
+run this command to install and create watcher service
+
+    curl -sL https://raw.githubusercontent.com/mylivingweb/Watcher/master/install.sh | sudo bash
+
+
 ## Requirements
 
 You need Python 2.7 and the [pyinotify](http://github.com/seb-m/pyinotify)
